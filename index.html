@@ -2,8 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+    />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -14,7 +20,10 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -22,67 +31,180 @@
   <body>
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p class="lead">
+        A simple calendar app for scheduling your work day
+      </p>
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
       <div class="row time-block">
-        <div id="hour9" class="col-md-2 col-sm-2 col-xs-2 hour" data-hour="9">9AM</div>
-        <textarea id="userEntry1" class="col-md-9 col-sm-9 col-xs-9 description"></textarea>
-        <button id="btn1" class="col-md-1 col-sm-1 col-xs-1 btn-block saveBtn fas fa-save"></button>
+        <div
+          id="hour9"
+          class="col-md-2 col-sm-2 col-xs-2 hour"
+          data-hour="9"
+        >
+          0900
+        </div>
+        <textarea
+          id="userEntry1"
+          class="col-md-9 col-sm-9 col-xs-9 description"
+        ></textarea>
+        <button
+          id="btn1"
+          class="col-md-1 col-sm-1 col-xs-1 btn-block saveBtn fas fa-save"
+        ></button>
       </div>
 
       <div class="row time-block">
-        <div id="hour10" class="col-md-2 col-sm-2 col-xs-2 hour" data-hour="10">10AM</div>
-        <textarea id="userEntry2" class="col-md-9 col-sm-9 col-xs-9 description"></textarea>
-        <button id="btn2" class="col-md-1 col-sm-1 col-xs-1 btn-block saveBtn fas fa-save"></button>
+        <div
+          id="hour10"
+          class="col-md-2 col-sm-2 col-xs-2 hour"
+          data-hour="10"
+        >
+          1000
+        </div>
+        <textarea
+          id="userEntry2"
+          class="col-md-9 col-sm-9 col-xs-9 description"
+        ></textarea>
+        <button
+          id="btn2"
+          class="col-md-1 col-sm-1 col-xs-1 btn-block saveBtn fas fa-save"
+        ></button>
       </div>
 
       <div class="row time-block">
-        <div id="hour11" class="col-md-2 col-sm-2 col-xs-2 hour" data-hour="11">11AM</div>
-        <textarea id="userEntry3" class="col-md-9 col-sm-9 col-xs-9 description"></textarea>
-        <button id="btn3" class="col-md-1 col-sm-1 col-xs-1 btn-block saveBtn fas fa-save"></button>
+        <div
+          id="hour11"
+          class="col-md-2 col-sm-2 col-xs-2 hour"
+          data-hour="11"
+        >
+          1100
+        </div>
+        <textarea
+          id="userEntry3"
+          class="col-md-9 col-sm-9 col-xs-9 description"
+        ></textarea>
+        <button
+          id="btn3"
+          class="col-md-1 col-sm-1 col-xs-1 btn-block saveBtn fas fa-save"
+        ></button>
       </div>
 
       <div class="row time-block">
-        <div id="hour12" class="col-md-2 col-sm-2 col-xs-2 hour" data-hour="12">12 AM</div>
-        <textarea id="userEntry4" class="col-md-9 col-sm-9 col-xs-9 description"></textarea>
-        <button id="btn4" class="col-md-1 col-sm-1 col-xs-1 btn-block saveBtn fas fa-save"></button>
+        <div
+          id="hour12"
+          class="col-md-2 col-sm-2 col-xs-2 hour"
+          data-hour="12"
+        >
+          1200
+        </div>
+        <textarea
+          id="userEntry4"
+          class="col-md-9 col-sm-9 col-xs-9 description"
+        ></textarea>
+        <button
+          id="btn4"
+          class="col-md-1 col-sm-1 col-xs-1 btn-block saveBtn fas fa-save"
+        ></button>
       </div>
 
       <div class="row time-block">
-        <div id="hour13" class="col-md-2 col-sm-2 col-xs-2 hour" data-hour="1">1300</div>
-        <textarea id="userEntry5" class="col-md-9 col-sm-9 col-xs-9 description"></textarea>
-        <button id="btn5" class="col-md-1 col-sm-1 col-xs-1 btn-block saveBtn fas fa-save"></button>
+        <div
+          id="hour13"
+          class="col-md-2 col-sm-2 col-xs-2 hour"
+          data-hour="13"
+        >
+          1300
+        </div>
+        <textarea
+          id="userEntry5"
+          class="col-md-9 col-sm-9 col-xs-9 description"
+        ></textarea>
+        <button
+          id="btn5"
+          class="col-md-1 col-sm-1 col-xs-1 btn-block saveBtn fas fa-save"
+        ></button>
       </div>
 
       <div class="row time-block">
-        <div id="hour14" class="col-md-2 col-sm-2 col-xs-2 hour" data-hour="2">1400</div>
-        <textarea id="userEntry6" class="col-md-9 col-sm-9 col-xs-9 description"></textarea>
-        <button id="btn6" class="col-md-1 col-sm-1 col-xs-1 btn-block saveBtn fas fa-save"></button>
+        <div
+          id="hour14"
+          class="col-md-2 col-sm-2 col-xs-2 hour"
+          data-hour="14"
+        >
+          1400
+        </div>
+        <textarea
+          id="userEntry6"
+          class="col-md-9 col-sm-9 col-xs-9 description"
+        ></textarea>
+        <button
+          id="btn6"
+          class="col-md-1 col-sm-1 col-xs-1 btn-block saveBtn fas fa-save"
+        ></button>
       </div>
 
       <div class="row time-block">
-        <div id="hour15" class="col-md-2 col-sm-2 col-xs-2 hour" data-hour="3">1500</div>
-        <textarea id="userEntry7" class="col-md-9 col-sm-9 col-xs-9 description"></textarea>
-        <button id="btn7" class="col-md-1 col-sm-1 col-xs-1 btn-block saveBtn fas fa-save"></button>
+        <div
+          id="hour15"
+          class="col-md-2 col-sm-2 col-xs-2 hour"
+          data-hour="15"
+        >
+          1500
+        </div>
+        <textarea
+          id="userEntry7"
+          class="col-md-9 col-sm-9 col-xs-9 description"
+        ></textarea>
+        <button
+          id="btn7"
+          class="col-md-1 col-sm-1 col-xs-1 btn-block saveBtn fas fa-save"
+        ></button>
       </div>
 
       <div class="row time-block">
-        <div id="hour16" class="col-md-2 col-sm-2 col-xs-2 hour" data-hour="4">1600</div>
-        <textarea id="userEntry8" class="col-md-9 col-sm-9 col-xs-9 description"></textarea>
-        <button id="btn8" class="col-md-1 col-sm-1 col-xs-1 btn-block saveBtn fas fa-save"></button>
+        <div
+          id="hour16"
+          class="col-md-2 col-sm-2 col-xs-2 hour"
+          data-hour="16"
+        >
+          1600
+        </div>
+        <textarea
+          id="userEntry8"
+          class="col-md-9 col-sm-9 col-xs-9 description"
+        ></textarea>
+        <button
+          id="btn8"
+          class="col-md-1 col-sm-1 col-xs-1 btn-block saveBtn fas fa-save"
+        ></button>
       </div>
 
       <div class="row time-block">
-        <div id="hour17" class="col-md-2 col-sm-2 col-xs-2 hour" data-hour="5">1700</div>
-        <textarea id="userEntry9" class="col-md-9 col-sm-9 col-xs-9 description"></textarea>
-        <button id="btn9" class="col-md-1 col-sm-1 col-xs-1 btn-block saveBtn fas fa-save"></button>
+        <div
+          id="hour17"
+          class="col-md-2 col-sm-2 col-xs-2 hour"
+          data-hour="17"
+        >
+          1700
+        </div>
+        <textarea
+          id="userEntry9"
+          class="col-md-9 col-sm-9 col-xs-9 description"
+        ></textarea>
+        <button
+          id="btn9"
+          class="col-md-1 col-sm-1 col-xs-1 btn-block saveBtn fas fa-save"
+        ></button>
       </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script></script>
+    <script src="script.js"></script>
+
   </body>
 </html>
