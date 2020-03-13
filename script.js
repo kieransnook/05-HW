@@ -1,4 +1,4 @@
-// var value = ""
+var value = ""
 var date = moment().format('dddd MMMM Do');
 $('#currentDay').text(date);
 var currentTime = moment().format("h:mma"); 
@@ -11,47 +11,47 @@ $(document).one('ready', function () {
 });    
  //9AM
     $('#btn1').on('click', function () {
-    var value1 = $("#userEntry1").val();
+    var value1 = $("#userInput9").val();
     localStorage.setItem("Entry1", value1);
     });
     //10AM
     $('#btn2').on('click', function () {
-    var value2 = $("#userEntry2").val();
+    var value2 = $("#userInput10").val();
     localStorage.setItem("Entry2", value2);
     });
     //11AM
     $('#btn3').on('click', function () {
-    var value3 = $("#userEntry3").val();
+    var value3 = $("#userInput11").val();
     localStorage.setItem("Entry3", value3);
     });
     //12PM
     $('#btn4').on('click', function () {
-    var value4 = $("#userEntry4").val();
+    var value4 = $("#userInput12").val();
     localStorage.setItem("Entry4", value4);
     });
     //1PM
     $('#btn5').on('click', function () {
-    var value5 = $("#userEntry5").val();
+    var value5 = $("#userInput13").val();
     localStorage.setItem("Entry5", value5);
     });
     //2PM
     $('#btn6').on('click', function () {
-    var value6 = $("#userEntry6").val();
+    var value6 = $("#userInput14").val();
     localStorage.setItem("Entry6", value6);
     });
     //3PMM
     $('#btn7').on('click', function () {
-    var value7 = $("#userEntry7").val();
+    var value7 = $("#userInput15").val();
     localStorage.setItem("Entry7", value7);
     });
     //4PM
     $('#btn8').on('click', function () {
-    var value8 = $("#userEntry8").val();
+    var value8 = $("#userInput16").val();
     localStorage.setItem("Entry8", value8);
     });
     //5PM
     $('#btn9').on('click', function () {
-    var value9 = $("#userEntry9").val();
+    var value9 = $("#userInput17").val();
     localStorage.setItem("Entry9", value9);
     });
     function checkTime() {
@@ -197,4 +197,5 @@ function checkTime() {
         // console.log('Tis after the 5pm hour');
         $('#userInput5').css('background', '#d3d3d3');
     }
+
 }
