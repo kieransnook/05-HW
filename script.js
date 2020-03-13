@@ -81,7 +81,6 @@ var fourEndTime = moment('4:59pm', format);
 var fiveBeginningTime = moment('5:00pm', format);
 var fiveEndTime = moment('5:59pm', format);
 
-
 // This function controls changing the colors of the rows as each hour passes.  It is set to update every second.
 setInterval(function () {
     checkTime();
