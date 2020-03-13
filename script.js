@@ -5,24 +5,15 @@ var currentTime = moment().format("h:mma");
 console.log(currentTime);
 
 
-//Call functio t update date
 setInterval(checkTime, 600000);
-//Click Events for each timeblock
 $(document).one('ready', function () {
     localStorage.clear();
 });    
-
-
-    // Handler for .ready() called.
-
-
  //9AM
     $('#btn1').on('click', function () {
     var value1 = $("#userEntry1").val();
     localStorage.setItem("Entry1", value1);
-    
     });
-
     //10AM
     $('#btn2').on('click', function () {
     var value2 = $("#userEntry2").val();
@@ -63,12 +54,10 @@ $(document).one('ready', function () {
     var value9 = $("#userEntry9").val();
     localStorage.setItem("Entry9", value9);
     });
-
     function checkTime() {
         let date = moment().format('dddd MMMM Do');
         $('#currentDay').text(date);
     }
-
     var scheduleArray = [];
 var time = moment();
 var format = 'hh:mma';
@@ -98,12 +87,11 @@ setInterval(function () {
     checkTime();
 }, 1000);
 
-
 function checkTime() {
     
     if (time.isBefore(nineBeginningTime)) {
         // console.log('Tis before 1pm hour');
-        $('#userInput9 ').css('background', '#77dd77');
+        $('#userInput9').css('background', '#77dd77');
     }
     if (time.isBetween(nineBeginningTime, nineEndTime)) {
         // console.log('Tis is the 9am hour');
@@ -209,27 +197,4 @@ function checkTime() {
         // console.log('Tis after the 5pm hour');
         $('#userInput5').css('background', '#d3d3d3');
     }
-    // function colorMe(time) {
-    //     var planNow = moment(now, "H A");
-    //     var planEntry = moment(time, "H A");
-    //     if (planNow.isBefore(planEntry) === true) {
-    //         return "future";
-    //     } else if (planNow.isAfter(planEntry) === true) {
-    //         return "past";
-    //     } else {
-    //         return "present";
-    //     }
-//     var endTime = "9:00a"
-// if (currentTime > endTime){
-//     for (var i = 9; i < 18; i++) { 
-//         console.log(currentTime, $(`#${i}`).data("time"));
-//          if ($(`#${i}`).data("time") == currentTime){
-//             $(`#text${i}`).addClass( "present");
-//         } else if (currentTime < $(`#${i}`).data("time")) {
-//             $(`#text${i}`).addClass( "future");
-//         }
-//     }
-
-
-
 }
